@@ -1,3 +1,9 @@
+#' Scaffold a Paper Vignette
+#'
+#' Scaffolds a vignette paper using the JSS template https://www.jstatsoft.org/style.
+#'
+#' @return Returns 1 invisibly if all went well
+#' @export
 scaffold <- function() {
   dir <- "vignettes"
   if (dir.exists(dir)) {
