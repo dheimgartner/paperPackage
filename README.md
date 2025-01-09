@@ -13,7 +13,7 @@ devtools::install_github("dheimgartner/paperPackage")
 
 ## Example
 
-This is a basic example which shows you how to use the functionality:
+This is a basic example which shows you how to use the functionality (assuming that you are in an R package repository, e.g., by calling `usethis::create_package(...)` first):
 
 ``` r
 library(paperPackage)
