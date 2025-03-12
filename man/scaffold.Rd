@@ -4,10 +4,13 @@
 \alias{scaffold}
 \title{Scaffold a Paper Vignette}
 \usage{
-scaffold()
+scaffold(template)
+}
+\arguments{
+\item{template}{Template to use (needs to match one of the templates available in \code{inst/templates}).}
 }
 \value{
-Returns 1 invisibly if all went well
+Returns 1 invisibly if all went well.
 }
 \description{
 Scaffolds a vignette paper using the JSS template https://www.jstatsoft.org/style.
