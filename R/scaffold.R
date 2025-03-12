@@ -13,13 +13,12 @@ scaffold <- function(template) {
   dir.create(dir)
   src <- system.file("templates", package = "paperPackage")
   templates <- list.dirs(src, full.names = FALSE)
-  browser()
   templates <- templates[templates != ""]
   if (!(template %in% templates)) {
     stop(template, " is not available as a template. Available templates are ", deparse(templates))
   }
   path <- paste(src, template, sep = "/")
-  file.copy(src, ".", recursive = TRUE)
-  file.rename("template", dir)
+  file.copy(path, ".", recursive = TRUE)
+  file.rename(template, dir)
   invisible(1)
 }
