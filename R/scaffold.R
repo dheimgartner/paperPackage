@@ -12,7 +12,7 @@ scaffold <- function(template) {
   }
   dir.create(dir)
   src <- system.file("templates", package = "paperPackage")
-  templates <- list.dirs(src, full.names = FALSE)
+  templates <- list.dirs(src, full.names = FALSE, recursive = FALSE)
   templates <- templates[templates != ""]
   if (!(template %in% templates)) {
     stop(template, " is not available as a template. Available templates are ", deparse(templates))
