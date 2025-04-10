@@ -1,0 +1,65 @@
+\documentclass[a4paper]{article}
+\usepackage{minimal}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[nochapters,eulermath=true]{classicthesis}
+\usepackage{natbib}
+
+%% recommended packages
+\usepackage{orcidlink,thumbpdf}
+\usepackage{framed}
+
+\bibliographystyle{minimal}
+
+\setlength{\marginparwidth}{4cm}
+\hypersetup{citecolor=teal}
+
+\SweaveOpts{engine=R, eps=FALSE, keep.source = TRUE}
+<<preliminaries, echo=FALSE, results=hide>>=
+options(prompt = "R> ", continue = "+  ", width = 70, useFancyQuotes = FALSE)
+library("MASS")
+@
+
+\author{Daniel Heimgartner}
+
+\title{A Short Demo Article}
+
+\begin{document}
+\maketitle
+
+\section{To cite or not to cite} \label{sec:cite}
+
+A nice book: \citet{Cameron+Trivedi:2013}
+
+\section{\R~code} \label{sec:code}
+\leftmarginpar{Wow this is some real code!}
+<<>>=
+f <- function() {
+  cat("Hello, world!\n")
+}
+f()
+@
+
+\section{Talking \code{code}}
+\leftmarginpar{\code{usethis::create\_package()}}
+\code{x <- 1}
+
+\section{Mathematik, Mathematik --- immer diese Mathemtik} \label{sec:maths}
+
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+\bibliography{refs}
+
+\newpage
+
+\begin{appendix}
+
+\section{More technical details} \label{app:technical}
+
+The appendix...
+
+\end{appendix}
+
+\end{document}
