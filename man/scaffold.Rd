@@ -4,13 +4,17 @@
 \alias{scaffold}
 \title{Scaffold a Paper Vignette}
 \usage{
-scaffold(template)
+scaffold(template, file_name = "article", .warn = FALSE)
 }
 \arguments{
 \item{template}{Template to use (needs to match one of the templates available in \code{inst/templates}).}
+
+\item{file_name}{File name for the article vignette.}
+
+\item{.warn}{if \code{TRUE}, warns if file from source is already in target.}
 }
 \value{
-Returns 1 invisibly if all went well.
+Character vector with files already in target.
 }
 \description{
 Scaffolds a vignette paper using the JSS template https://www.jstatsoft.org/style.
