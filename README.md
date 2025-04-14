@@ -21,7 +21,6 @@ that you are in an R package repository, e.g., by calling
 `usethis::create_package(...)` first):
 
 ``` r
-library(paperPackage)
 paperPackage::scaffold(template = "JSS")
 ```
 
