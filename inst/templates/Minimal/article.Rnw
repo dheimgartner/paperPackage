@@ -44,7 +44,7 @@ f()
 \leftmarginpar{\code{usethis::create\_package()}}
 \code{x <- 1}
 
-\section{Mathematik, Mathematik --- immer diese Mathemtik} \label{sec:maths}
+\section{Mathematik, Mathematik --- immer diese Mathematik} \label{sec:maths}
 
 \begin{equation}
 a^2 + b^2 = c^2

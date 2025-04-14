@@ -3,14 +3,12 @@
 #' Scaffolds a vignette paper using the JSS template https://www.jstatsoft.org/style.
 #'
 #' @param template Template to use (needs to match one of the templates available in `inst/templates`).
-#' @return Returns 1 invisibly if all went well.
+#' @param file_name File name for the article vignette.
+#' @param .warn if `TRUE`, warns if file from source is already in target.
+#' @return Character vector with files already in target.
 #' @export
-scaffold <- function(template) {
+scaffold <- function(template, file_name = "article", .warn = FALSE) {
   dir <- "vignettes"
-  if (dir.exists(dir)) {
-    stop(dir, " directory already exists.")
-  }
-  dir.create(dir)
   src <- system.file("templates", package = "paperPackage")
   templates <- list.dirs(src, full.names = FALSE, recursive = FALSE)
   templates <- templates[templates != ""]
@@ -18,7 +16,12 @@ scaffold <- function(template) {
     stop(template, " is not available as a template. Available templates are ", deparse(templates))
   }
   path <- paste(src, template, sep = "/")
-  file.copy(path, ".", recursive = TRUE)
-  file.rename(template, dir)
-  invisible(1)
+  ## copy to tmp
+  tmp <- tempdir()
+  copy(path, tmp)
+  ## rename article
+  file.rename(paste0(tmp, "/article.Rnw"), paste0(tmp, "/", file_name, ".Rnw"))
+  ## copy from tmp to dir
+  out <- copy(tmp, dir, .warn = .warn)
+  out
 }
