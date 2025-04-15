@@ -1,9 +1,9 @@
 #' Scaffold a Paper Vignette
 #'
-#' Scaffolds a vignette paper using the JSS template https://www.jstatsoft.org/style.
+#' Scaffolds a vignette paper using a template.
 #'
 #' @param template Template to use (needs to match one of the templates available in `inst/templates`).
-#' @param file_name File name for the article vignette.
+#' @param file_name File name for the article vignette (defaults to `"article"`).
 #' @param .warn if `TRUE`, warns if file from source is already in target.
 #' @return Character vector with files already in target.
 #' @export

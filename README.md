@@ -1,14 +1,14 @@
 
 # paperPackage
 
-The goal of paperPackage is to scaffold a vignettes folder with the necessary 
-template files to write an academic paper. Currently templates from the Journal 
-of Statistical Software (https://www.jstatsoft.org/style) and the R Journal 
+The goal of `paperPackage` is to scaffold a vignettes folder with the necessary 
+template files to write an academic paper. For example, templates from the Journal 
+of Statistical Software (https://www.jstatsoft.org/style) or the R Journal 
 (https://journal.r-project.org/submissions.html) are available.
 
 ## Installation
 
-You can install the development version of paperPackage like so:
+You can install the development version of `paperPackage` like so:
 
 ``` r
 devtools::install_github("dheimgartner/paperPackage")
