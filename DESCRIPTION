@@ -1,6 +1,6 @@
 Package: paperPackage
 Title: Scaffold a Package for an Academic Paper
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: 
     person("Daniel", "Heimgartner", email = "d.heimgartners@gmail.com", role = c("aut", "cre", "cph"),
     comment = c(ORCID = "0000-0002-0643-8690"))
